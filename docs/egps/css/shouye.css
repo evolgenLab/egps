@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* CSS Document */
+/******首页内容样式*******/
+.contact {
+    margin: auto;
+    width: 1060px;
+    clear: both;
+    padding: 20px 0px 30px 0px;
+    height: auto;
+    overflow: auto;
+    background-repeat: no-repeat;
+}
+
+.con_HPC {
+    width: 310PX;
+    height: 390PX;
+    float: left;
+    font-size: 15px;
+    color: #484848;
+    line-height: 22px;
+    font-family: "Arial";
+    padding: 0 10px;
+}
+
+.con_HPC h1 {
+    font-size: 24px;
+    color: #eeeded;
+    font-family: "Arial";
+    text-align: center;
+    padding-top: 180px;
+    font-weight: normal;
+    padding-bottom: 80px;
+}
+
+.con_HPC span {
+    font-size: 24px;
+    color: #6696bd;
+    font-family: "Bell MT";
+    text-align: left;
+    padding-top: 190px;
+    font-weight: normal;
+}
+
+.con_intro {
+    width: 1060px;
+    height: 530px;
+    float: left;
+    background-image: url(../images/bio06.png);
+    background-repeat: no-repeat;
+    background-position: 80px 0px;
+    margin: 70px 0px 0px 0px;
+}
+
+.con_intro1 {
+    height: auto;
+    float: left;
+}
+
+.con_intro2 {
+    height: 100px;
+    width: 120px;
+    font-family: "微软雅黑";
+    line-height: 100px;
+    color: #fcfcfc;
+    font-size: 48px;
+    float: left;
+    font-size: 72px;
+    text-align: center;
+}
+
+.con_intro3 {
+    height: auto;
+    float: left;
+    font-family: "Arial";
+    line-height: 20px;
+    color: #282828;
+    font-size: 14px;
+    float: left;
+}
+
+.con_intro3 h1 {
+    font-size: 24px;
+    color: #6696bd;
+    font-family: "Bell MT";
+    font-weight: normal;
+}
+
+.con_intros {
+    width: 1060px;
+    height: 345px;
+    float: left;
+    margin: 50px 0px 0px 0px;
+}
+
+.con_intros1 {
+    height: auto;
+    float: left;
+    width: 1060px;
+    font-family: "Arial";
+    line-height: 20px;
+    color: #282828;
+    font-size: 14px;
+    float: left;
+    padding-bottom: 45px;
+}
+
+.con_intros1 h1 {
+    font-size: 24px;
+    color: #6696bd;
+    font-family: "Bell MT";
+    font-weight: normal;
+}
+
+/******首页内容样式end*******/
+/******关于我们样式*******/
+.aboutus {
+    margin: auto;
+    width: 1200px;
+    clear: both;
+    padding: 20px 0px 30px 0px;
+    height: auto;
+    overflow: auto;
+    background-repeat: no-repeat;
+    margin-top: 45px
+}
+
+.about_left {
+    width: 260px;
+    height: 300px;
+    float: left;
+    text-align: right;
+    font-family: "Arial";
+    line-height: 20px;
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+.about_left h1 {
+    font-size: 32px;
+    color: #6696bd;
+    font-family: "Bell MT";
+    line-height: 35px;
+    font-weight: normal;
+    background-image: url(../images/bio08.png);
+    background-repeat: no-repeat;
+    background-position: right 32px;
+    margin-bottom: 10px;
+}
+
+.about_left a {
+    color: #4e4e4e;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.about_left a:hover {
+    color: #eb7807;
+    text-decoration: none;
+}
+
+.about_left img {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.about_right {
+    width: 800px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.about_right1 {
+    width: 800px;
+    float: left;
+    font-family: "Arial";
+    line-height: 20px;
+    color: #505050;
+    font-size: 14px;
+}
+
+.about_right1 h1 {
+    font-family: "Arial";
+    color: #126cb7;
+    font-size: 24px;
+    padding-bottom: 5px;
+    font-weight: normal;
+}
+
+.about_right2 {
+    height: auto;
+    float: left;
+    font-size: 14px;
+    color: #737373;
+    text-align: left;
+    font-family: "Arial";
+    line-height: 20px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.about_right2 h1 {
+    font-family: "Arial";
+    color: #126cb7;
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.about_right2 span {
+    font-size: 14px;
+    color: #484848;
+    font-family: "Arial";
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.about_right2 a {
+    color: #0066d6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.about_right2 a:hover {
+    color: #e7952c;
+    text-decoration: none;
+}
+
+/******关于我们样式end*******/
+
+/******下载样式*******/
+.download_tel {
+    width: 840px;
+    height: auto;
+    float: left;
+    font-size: 14px;
+    color: #484848;
+    font-family: "Arial";
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.download1 {
+    width: 840px;
+    height: auto;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.download1 p, li, td {
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 20px;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.download1 table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+.download1 td {
+    border: 1px solid #dad8d8;
+    font-size: 13px;
+    color: #4f4f4f;
+    line-height: 40px;
+    height: 40px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.download1 td a {
+    font-size: 15px;
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.download1 td a:hover {
+    color: #eb7807;
+    text-decoration: underline;
+}
+
+.download1 th {
+    font-family: "Arial";
+    font-size: 16px;
+    line-height: 40px;
+    color: #333;
+    border: 1px solid #dad8d8;
+    text-align: center;
+    font-weight: normal;
+    background-color: #eee;
+}
+
+.download2 {
+    width: 840px;
+    height: auto;
+    float: left;
+    font-size: 14px;
+    color: #484848;
+    font-family: "Arial";
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.download2 h1 {
+    font-size: 14px;
+    color: #126cb7;
+    font-family: "Arial";
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+/******下载样式end*******/
+
+.features1 {
+    height: 200px;
+    float: left;
+    font-size: 13px;
+    color: #e8e8e8;
+    font-family: "Arial";
+    line-height: 20px;
+    padding: 30px 10px 0px 20px;
+}
+
+.features1 h1 {
+    font-family: "Bell MT";
+    color: #f0f0f0;
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+.features2 {
+    height: 200px;
+    float: left;
+    font-size: 13px;
+    color: #494949;
+    font-family: "Arial";
+    line-height: 20px;
+    padding: 30px 10px 0px 20px;
+}
+
+.features2 h1 {
+    font-family: "Bell MT";
+    color: #708fca;
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    padding-top: 5px;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eGPS Cloud</title>
+
+<link href="css/share.css" type="text/css" rel="stylesheet"/>
+<link href="css/home.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+
+  <!-- top start-->
+  <div class="index_top">
+    <div class="index_top1"><img src="images/logo_epgs.png" title="bio" /></div>
+    <div class="nav">
+    <ul class="w">
+      <li><a href="http://www.egps-project.org/egps/index.jsp" class="navbar-brand" target="_blank">eGPS</a></li>   
+      <li><a href="#" >Home</a></li>            
+	  <li class="active"><a href="tutorial.html">Tutorial&amp;Demo</a></li>                       
+	  <li><a href="contact.html">Contact</a></li>  
+    </ul>
+	</div>
+  </div>
+  <!-- top end-->
+  
+  <!-- bwa  start-->
+  <div class="content_bwa">
+    <div class="cb_title"><img src="images/egpsico010.png" /> BWA (Version: 0.7.10-r789)</div>
+	<div class="cb_neir">
+	  <h1>General Parameters</h1>
+	  <div class="cb_prompt">Choose experiment method and Reference</div>
+	  <ul>
+	    <li style="width:160px">Experiment Method</li>
+		<li><select style="width:350px"><option>Signle end</option><option>Pair end</option></select></li>
+	  </ul>
+	  <ul>
+	    <li style="width:160px">References</li>
+		<li><select style="width:350px">
+					  <option value="-1" style="font-weight:bold; font-style:italic;" disabled="disabled">Animals-----------</option>
+						 <option value="1" selected="selected">Homo sapiens (human GRCh37)</option>
+						 <option value="19">Bos taurus (cattle UMD_3.1)</option>
+						  <option value="11" >Gallus gallus (chicken Gallus_gallus-5.0)</option>
+						  <option value="3">Canis familaries (dog CanFam3.1)</option>
+						  <option value="15" >Anas platyrhynchos (duck BGI_duck_1.0)</option>
+						  <option value="6">Ailuropoda melanoleuca (giant panda AilMel1)</option>
+						  <option value="17">Capra hircus (goat CHIR_2.0)</option>
+						  <option value="8" >Orcinus orca (killer whale Oorcal.1)</option>
+						  	<option value="18">Sus scrofa (pig Sscrofa10.2)</option>
+						 <option value="14" >Ovis aries (sheep Oarv4.0)</option>
+					    <option value="-1" style="font-weight:bold;font-style:italic;" disabled="disabled">Plants-----------</option>
+						  <option value="5">Zea mays (maize RefGen_v3)</option> 
+						  <option value="7"  >P.heterocycla (moso bamboo P.heterocycle 1.0)</option>
+						  <option value="12" >Populus trichocarpa (poplar JGI v3.0)</option>
+						  	<option value="2">Oryza sativa (rice IRGSP1.0)</option>
+							 <option value="13" >Hevea brasiliensis (rubber reyan7-33-97)</option>
+						   	<option value="4">Sorghum bicolor (sorghum Sorbi3)</option>
+						 	<option value="10"  >Glycine max (soybean Wm82.a2.v1)</option>
+							<option value="16" >Solanum lycopersicum (tomato SL2.50)</option> 
+							<option value="9">Triticum aestivum (wheat TGACv1)</option>
+						  
+					
+					</select></li>
+	  </ul>
+	  
+	  <h1 style="margin-top:30px">Raw Data Upload</h1>
+	  <div class="cb_prompt">The first file we expected is the sequence file(*.csfasta), the second file we excepted is the quality file(*.qual). All the files should be compressed (*.zip or *.tar.gz) before upload. The size of each file must be less than 1GB,the total size of the files must be less than 2GB.</div>
+	  <ul>
+	    <li style="width:160px">Sequence File upload</li>
+		<li><input type="file" id="exampleInputFile" >  choose a local file</li>
+	  </ul>
+	  <ul>
+	    <li style="width:160px">Or</li>
+		<li><input type="button"  value="Choose from eGPS-Cloud" onclick="window.location.href='../egpsfile.html'"></li>
+	  </ul>
+	  
+	  <h1 style="margin-top:30px">Mapping Parameters</h1>
+	  <div class="cb_prompt">Choose bwa algrithoms and setting parameters</div>
+	  <ul>
+	    <li style="width:160px">BWA algrithom</li>
+		<li><select style="width:180px" ><option>mem</option><option>aln</option><option>pemerge</option></select></li>
+	  </ul>
+	  <ul>
+	    <li style="width:160px">-l (Seeds length)</li>
+		<li><input type="text" value="32" style="width:175px" /></li>
+	  </ul>
+	  <ul>
+	    <li style="width:160px">-k (Seeds mismatches)</li>
+		<li><select style="width:180px"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></li>
+	  </ul>
+	  <ul>
+	    <li style="width:160px">-n (Total mismatches)</li>
+		<li><select style="width:180px"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4" selected="selected">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></li>
+	  </ul>
+	  
+	  <h1 style="margin-top:30px">Email</h1>
+	  <div class="cb_prompt">Please provide an email address for your result, or bookmark the result page by pressing down the 'Bookmup this page' button on the top of the result page.</div>
+	  <ul>
+	    <li style="width:160px">Email address</li>
+		<li><input type="text" style="width:180px" /></li>
+	  </ul>
+	</div>
+	
+	<div class="cb_button"><a href="#">Submit</a></div>
+	
+	<div class="cb_reference">
+	<h1>Reference</h1>
+Li H. and Durbin R. (2010) Fast and accurate long-read alignment with Burrows-Wheeler Transform. Bioinformatics, Epub. [<a href="#">PMID: 20080505</a>]</div>
+	
+  </div>
+  <!-- bwa end-->
+  
+	
+  <!-- 底部 -->
+  <div class="foot">
+    <ul>
+	  <li><h1>Genome Data Analysis</h1></li>
+	  <li><a href="#">BWA</a></li>
+	  <li><a href="#">GATK</a></li>
+	</ul>
+	<ul>
+	  <li><h1>Population Data Analysis </h1></li>
+	  <li><a href="#">XPCLR </a></li>
+	  <li><a href="#">FastEPRR </a></li>
+	</ul>
+	<ul>
+	  <li><h1>Evolution Data Analysis</h1></li>
+	  <li><a href="#">GeneTree 1.3</a></li>
+	  <li><a href="#">TreeSAAP 3.2</a></li>
+	</ul>
+	<ul>
+	  <li><h1>Data visualization</h1></li>
+	  <li><a href="#">Bar Chart</a></li>
+	  <li><a href="#">Line Chart</a></li>
+	  <li><a href="#">Histogram Chart</a></li>
+	</ul>
+	<ul>
+	  <li><h1>About us</h1></li>
+	  <li><a href="#">About us</a></li>
+	</ul>
+
+	<div class="foot1">
+	  <ul style="width:33px">
+	    <li><img src="images/foot001.png"></li>
+	  </ul>
+	  <ul style="width:1000px">
+	    <li>Strategic pilot science and technology project of the Chinese Academy of Sciences (B) Item number: XDB13000000<br />
+©China of Beijing Institute of Genome Research Institute　　　　Beijing ICP No. 10050270 -4<br /> 
+security network security record number 1101050063</li>
+	  </ul>
+	</div>
+  </div>
+  <!-- 底部 end -->
+
+</body>
+</html>

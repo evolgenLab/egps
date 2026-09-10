@@ -1,0 +1,19 @@
+<table>
+	<tr>
+	<th width="260">#total reads</th>
+	<td width="189">55961600</td>
+	</tr>
+	<tr><th>#duplicates reads</th><td>0</td></tr>
+	<tr><th>#mapped reads</th><td>51476920(91.99%)</td></tr>
+	<tr><th>#paired in sequencing</th><td>55961600</td></tr>
+	<tr><th>#read1</th><td>27980800</td></tr>
+	<tr><th>#read2</th><td>27980800</td></tr>
+	<tr><th>#properly paired reads</th><td>49370579</td></tr>
+	<tr><th>#with itself and mate mapped reads</th><td>50822586</td></tr>
+	<tr><th>#singletons reads</th><td>654334(1.17%)</td></tr>
+	<tr><th>#with mate mapped to a different chr</th><td>45002 </td></tr>
+	<tr><th>#with mate mapped to a different chr(mapQ>=5)</th><td>24285 </td></tr>
+	<tr><th>GC content</th><td>0.488925</td></tr>	
+	<tr><th>Reference length</th><td>3.08044G</td></tr>
+	<tr><th>Ave depth</th><td>14.6364</td></tr>									
+</table>

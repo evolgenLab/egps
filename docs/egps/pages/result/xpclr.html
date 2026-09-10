@@ -1,0 +1,177 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eGPS Cloud</title>
+    <script src="/egpscloud/egps/js/jquery.min.1.12.4.js" type="text/javascript"></script>
+    <script src="/egpscloud/egps/js/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="/egpscloud/egps/js/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/share.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/buttons.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<div class="container">
+    <!-- top start-->
+    <jsp:include page="/inc/header.html"/>
+    <!-- top end-->
+    <div style="clear:both;"></div>
+
+    <!-- content start -->
+
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="header_border" style="margin-top:20px;">
+                <div><h3>Job ID: <s:property value="#parameters.jobid"/></h3></div>
+
+                <div class="panel">
+                    <div class="panel-body" style="padding:0px; border:none;">
+                        <div class="header">Job Status</div>
+                        <table width="556" cellspacing="0" cellpadding="5" id="idtaskrun" class="searchresult">
+                            <tr>
+                                <th width="150">Started</th>
+                                <th width="211">Processed</th>
+                                <th width="163">Finished</th>
+                            </tr>
+
+                            <tr>
+                                <td id="idstartstatus">Waiting</td>
+                                <td id="idrunstatus">Waiting</td>
+                                <td id="idfinishstatus">Waiting</td>
+                            </tr>
+                            <tr>
+                                <td id="idstarttime"></td>
+                                <td id="idruntime"></td>
+                                <td id="idfinishtime">&nbsp;</td>
+                            </tr>
+                        </table>
+                        <div class="header" style="margin-top:20px;">Result&nbsp;&nbsp;&nbsp;&nbsp; <span
+                                id="iddownloadfile"></span></div>
+                        <div style="padding-top:10px;padding-bottom:10px;margin-top:10px;margin-bottom:10px;">The result
+                            of XPCLR.
+                        </div>
+                        <div id="idtaskresult" style="padding-left:25px; overflow:auto;">
+                            <div id="idtasktext">Waiting</div>
+
+                            <div>
+                                <iframe id="idtaskpic"
+                                        style="width:800px; height:500px; display:none;margin-top:10px;border:1px solid #cccccc;"
+                                        src="#"></iframe>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="header_border" style="margin-top:20px; margin-left:0px; padding-left:0px;">
+                <div class="header"
+                     style="margin-left:0px; margin-top:-6px; font-size:16px; background-image:url('/egpscloud/images/rc_header_mid.gif'); background-repeat:repeat-x; font-size:1.2em;padding:8px 0px;">
+                    Submitted Parameters
+                </div>
+                <div id="idsubparameter" style="overflow:auto;">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- content end -->
+    <jsp:include page="/inc/footer.html"/>
+
+</div>
+<script type="text/javascript" language="javascript">
+    ajaxGetRunTimeFunc();
+
+    //this is used to get running time
+    function ajaxGetRunTimeFunc() {
+        var taskid = "<s:property value='#parameters.taskId'/>";
+        var weburl = "http://biocloud.big.ac.cn/ajax/ajaxshowResult.action?time=" + new Date().getTime();
+        var nameparam = {"taskId": taskid};
+        $.ajax({
+            url: weburl,
+            type: 'post',
+            dataType: 'json',
+            data: nameparam,
+            success: function (data) {
+                //show task running status idtaskrun
+
+                if (data.anotherMap != null) {
+
+                    var html = "";
+                    for (var key in data.anotherMap) {
+                        var logobj = data.anotherMap[key];
+                        var starttime = logobj.startTime;
+                        var endtime = logobj.endTime;
+                        if (starttime != null) {
+                            $("#idstartstatus").html("Started");
+
+                            $("#idstarttime").html("Start at: " + starttime);
+                            $("#idrunstatus").html("Running");
+                        }
+
+                        if (endtime != null && endtime != "") {
+                            $("#idrunstatus").html("Finished");
+                            $("#idfinishstatus").html("Finished");
+                            $("#idfinishtime").html("End at: " + endtime);
+                            var jobid = "<s:property value='#parameters.jobid'/>";
+                            $("#iddownloadfile").html("<button class='btn btn-primary' onclick='saveas()' >download</button>");
+
+                            //run time
+
+                            $("#idruntime").html("Run time: " + logobj.runTime);
+
+                            //show result
+                            $("#idtasktext").html("");
+                            var pic = "http://egpscloud.big.ac.cn/egpsfile/epgscloud@big.ac.cn/XPCLR/" + jobid + "/xpclr_1/output.xpclr.txt.png";
+
+                            $("#idtaskpic").attr("src", pic);
+                            $("#idtaskpic").css("display", "block");
+
+
+                        }
+                    }
+                }
+
+
+                //here output input parameter
+                html = "";
+                $("#idsubparameter").html("");
+                if (data.attributeList != null) {
+                    for (var i = 0; i < data.attributeList.length; i++) {
+                        var attribute = data.attributeList[i];
+                        html += "<div style='padding:5px 0px;padding-left:5px;word-wrap:break-word'>" + attribute.name + ":&nbsp;<b>" + attribute.value + "</b></div>";
+
+                    }
+
+                }
+                $("#idsubparameter").html(html);
+
+            }
+        });
+
+
+    }
+
+    function saveas() {
+        var jobid = "<s:property value='#parameters.jobid'/>";
+        window.location.href = "http://egpscloud.big.ac.cn/egpsfile/epgscloud@big.ac.cn/XPCLR/" + jobid + "/xpclr_1/output.xpclr.txt";
+    }
+</script>
+
+
+</body>
+</html>

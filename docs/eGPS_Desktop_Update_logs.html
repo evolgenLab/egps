@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.egps-software.org/egpscloud/index_desktop.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+    <link rel="shortcut icon" href="http://www.egps-software.org/egpscloud/egps/images/eGPS_link.png">
+
+	<title>eGPS Desktop</title>
+
+	<style>
+
+		* {
+
+			margin: 0px;
+
+            padding: 0px;
+
+		}
+
+        #container {
+
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 28px;
+
+        }
+
+        #head {
+
+            width: 100%;
+
+            background: #468CAF;
+
+        }
+
+		#text {
+
+            margin-top: 20px;
+
+            font-family: "Calibri";
+
+        }
+
+        #logo {
+
+            width: 43px;
+
+            height: 100px;
+
+            padding-top: 10px;
+
+        }
+
+        #software {
+
+            width: 500px;
+
+            height: 85px;
+
+            padding-left: 40px;
+
+        }
+
+		#log{ 
+
+			margin: 0 auto; 
+
+			width: 800px; 
+
+		}
+
+		ul {
+
+    		margin: 20px auto; 
+
+			text-align: left;
+
+			font-family: "Calibri";
+
+        }
+
+        li {
+
+        	font-size: 16px;
+
+        	margin-left: 20px;
+
+        	margin-top: 10px;
+
+        }
+
+        .version {
+
+        	font-size: 20px;
+
+        	list-style-type:none;
+
+        	margin: 0px;
+
+        }
+
+        a {
+
+            color: #0b68b5;
+
+            text-decoration: none;
+
+        }
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+        a span {
+
+            color: deepskyblue;
+
+        }
+
+		#footer {
+
+            margin-top: 30px;
+
+            width: 100%;
+
+            background: #468CAF;
+
+        }
+
+        #footer p {
+
+            display: inline-block;
+
+            font-size: 13px;
+
+            color: white;
+
+            text-align: left;
+
+            margin-top: 5px;
+
+            font-family: "Calibri";
+
+        }
+
+        #footer a {
+
+            color: white;
+
+        }
+
+        #footer img {
+
+            display: inline-block;
+
+            vertical-align: text-top;
+
+        }
+
+		.features{
+
+			list-style-type:none;
+
+			font-weight: bold;
+
+		}
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+
+
+	<div id="head">
+
+        <img src="../egpscloud/egps/images/First_page_label1.png" id="logo">
+
+        <img src="../egpscloud/egps/images/First_page_label2.png" id="software">
+
+    </div>
+
+	
+
+	<div id="text">
+	  <p><strong>eGPS Update logs</strong></p>
+	</div>
+
+	
+
+	<div id="log">
+
+		
+		<ul>
+		  <li class="version"><a href="./eGPS_Desktop.html" target="_blank">eGPS 2.0 </a> (<font color="DodgerBlue">Latest</font>)<span> &nbsp; <font size="3">2024/06/05</font></span></li>
+		  <li class="features">New features:</li>
+        <li>1.The modern graphic user interface and the novel main framework. The eGPS 2.0 version implements a beautiful graphic interface.
+</li>
+		<li>2.The implementation of the VOICM data import and running mechanism. 
+</li>
+		<li>3.Take the advantages of the Command Line Interface (CLI) and Scripting software operating modes. 
+</li>
+		<li>4.Provides various kinds of highly demanding built-in modules.
+</li>
+			
+
+<li class="features">What we removed:</li>
+		<li>1. The buttons in the toolbar that only a few modules are used, and pause/continue button for thread control.
+</li>
+		<li>2. History recording functionalities.
+</li>
+		<li>3. JavaFx graphic interface and WebKit-based html and JS code.
+</li>
+			
+		</ul>
+		
+			<ul>
+		  <li class="version">eGPS 1.26<span>&nbsp;<font size="3">2024/06/05</font></span></li>
+		
+				  <li class="features">New features:</li>
+        <li>1.Add ”From aligned protein to aligned CDS“ module.
+
+</li>
+		
+
+<li class="features">Fixed bug:</li>
+			<li>1.Fix the problem of drawing when the branch length was 0 in CGB plug-in.
+</li>
+			<li>2.Fix the problem of text compression during initialization of "Genome browser" panel in CGB plug-in.
+
+</li>
+			<li>3.Fix the problem of exact match search in CGB plug-in.
+</li>
+		
+		</ul>
+		
+			<ul>
+		  <li class="version">eGPS 1.25<span>&nbsp;<font size="3">2023/08/30</font></span></li>
+		
+				  <li class="features">New features:</li>
+        <li>1.Add support for searching for pango and VOC in CGB.
+
+
+</li>
+			<li>2.Implement a new feature enabling linkage between “BranchLabel“ buttons and Tree panel in CGB2.0.
+
+</li>
+			
+			
+
+<li class="features">Fixed bug:</li>
+			<li>1.Optimize tree visualization in CGB 2.0.
+
+</li>
+		
+		</ul>
+		<ul>
+		  <li class="version">eGPS 1.24<span>&nbsp;<font size="3">2023/06/14</font></span></li>
+		
+		  <li class="features">New features:</li>
+        <li>1.Add ”Generate sequence logo“ module.
+
+</li>
+			<li>2.Add "Diversity Descriptor" module which can generate mutation information according aligned fasta file.
+</li>
+			<li>3.Add  the functionality of coloring according to the properties of amino acids to "Alignment viewer" module.
+
+</li>
+			
+
+<li class="features">Fixed bug:</li>
+			<li>1. Fix the string display deviation problem in the "Alignment viewer" module.
+</li>
+		
+		</ul>
+		
+		
+		
+	  <ul>
+		  <li class="version">eGPS 1.23<span>&nbsp;<font size="3">2023/03/09</font></span></li>
+		
+		  <li class="features">New features:</li>
+        <li>1.Add CGB2.0 plug-in. The CGB2.0 is  an upgrade version of CGB1.0, with low memory usage.
+</li>
+			
+
+<li class="features">Fixed bug:</li>
+			<li>1.Fix the problem that the "Alignment viewer" module cannot color amino acid alignment.
+
+</li>
+			
+			<li>2.Fix the problem that deletion is partly omitted in the "inferMutation" plug-in.
+</li>	
+		</ul>
+		
+			<ul>
+		  <li class="version">eGPS 1.22<span>&nbsp;<font size="3">2023/01/17</font></span></li>
+		 	<li class="features">New features:</li>
+        <li>1.Add new pptx vector save format for each visual module.
+</li>
+			<li>2.The "Tree viewer" module supports labeling leaf tags that meet the label name search criteria.
+</li> 
+			<li>3.Upgrade the search function of CGB,  adding precise search, fuzzy search and cumulative mutation search functions.
+</li> 
+			<li>4.Update the FitCoal plugin to the new version.
+</li> 
+<li class="features">Fixed bug:</li>
+			<li>1.Fix the problem that the "Build tree" function of the "VCF Operator" module does not support long genome lengths.
+</li>
+			
+			<li>2.Fix the incomplete display problem of "Mark" function of the "Alignment viewer" module when the control bar was narrow.
+</li>	
+		</ul>
+				
+		<ul>
+		  <li class="version">eGPS 1.21<span>&nbsp;<font size="3">2022/10/26</font></span></li>
+		  <li class="features">New features:</li>
+     <li>1.	Optimize the variation mark system of CGB to make sure that the sequence alignment can be completely recovered by the mutation process.</li>
+			<li>2.Accelerate the analysis pipeline for the CGB to add a new sequence to an existed CGB tree.</li> 
+		 <li>3.	Add more data import modes to the "Genomic mutation presenter" module. The module now can support fasta file and file with cumulative mutation information in the mutation information setting part. See user manual for details or launch the module in eGPS desktop to see examples.</li> 
+			<li>4.	Optimize the tree visualization of CGB.</li>
+				
+
+
+		  
+
+		</ul>
+		
+		<ul>
+		  <li class="version">eGPS 1.20<span>&nbsp;<font size="3">2022/07/27</font></span></li>
+		  <li class="features">New features:</li>
+     <li>1.	Optimize and accelerate the analysis pipeline for the CGB to add a new sequence to an existed CGB tree.</li>
+			<li>2. Provide an API for drawing evolutionary tree in rectangular layout. Users can invoke this API independently in IDEs such as Eclipse. This method is suitable for users who use JAVA as the main programming language.</li> 
+		 
+				<li class="features">Fixed bug:</li>
+			<li>Fix the problem that the “Tree view” related modules cannot be saved as pdf.</li>
+
+
+		  
+
+		</ul>
+		
+		
+		<ul>
+		  <li class="version">eGPS 1.19<span>&nbsp;<font size="3">2022/03/28</font></span></li>
+		  <li class="features">New features:</li>
+     <li>1.	A greatly optimized CGB version with faster loading speeds and lower memory requirements.</li>
+			<li>2.	Add inferMutation plug-in.</li> 
+		<li>3.	New eGPS splash screen.</li> 
+			
+
+
+		  
+
+		</ul>
+		
+		<ul>
+		  <li class="version">eGPS 1.18<span>&nbsp;<font size="3">2022/02/21</font></span></li>
+		  <li class="features">New features:</li>
+         <li>1.	Add sampleCGBTree plug-in.</li>
+			<li>2.	Add nwk2CGBnwk plug-in.</li> 
+		<li>3.	Optimize the analysis pipeline for the CGB to add a new sequence to an existed CGB tree.</li> 
+			
+
+			<li class="features">Fixed bug:</li>
+			<li>Fix the problem that the backmutation highlight feature of CGB can only display one backmutation index number.</li>
+		  
+
+		</ul>
+		
+		<ul>
+		  <li class="version">eGPS 1.17<span>&nbsp;<font size="3">2022/01/12</font></span></li>
+		  <li class="features">New features:</li>
+        <li>1.	Add Genomic mutation presenter module.</li>
+			<li>2.	Change the color scheme of the Alignment viewer module.</li> 
+		<li>3.	Add the functionality of visualizing sample or internal node mutations in CGB.</li> 
+
+			
+
+			<li class="features">Fixed bug:</li>
+			<li>1.	Fix the color rendering problem in Alignment viewer module.</li>
+			<li>2.	Fix problem of underestimate the effective length of the genome in the Build tree module when build tree from VCF file/files.</li>
+
+		  
+
+		</ul>	
+		
+		
+		<ul>
+		  <li class="version">eGPS 1.16<span>&nbsp;<font size="3">2021/12/14</font></span></li>
+		  <li class="features">New features:</li>
+
+		
+<li>1. Add a user guide interface in eGPS.</li>
+			
+	        <li>2. Add Back mutations presenter module.</li>
+			 <li>3. Add Date time calculator module.</li>
+			<li>4. Add String set operator module.</li>
+			<li>5. Add the option of importing online sampling data in CGB.</li>
+			<li>6. Optimize the response speed of the right-click menu of the “Tree display panel” in CGB.</li>
+			<li>7. Use multiple threads to accelerate the process of adding a new sequence to an existing tree.</li>
+			<li>8. Accelerate the initial loading process of CGB by changing the updates of “Allele freq” in “Genome browser”panel to an active event. Users can refresh the data of “Allele freq” by click the function “Refresh mutation freq” in the right click menu of “Tree display panel” or “Genome browser” panel.</li>
+
+			<li class="features">Fixed bug:</li>
+<li>Fix the problem that the results of “Plain text info” panel in the “Venn diagram” module cannot be saved.</li>
+
+		  
+
+		</ul>	
+		
+		<ul>	
+ <li class="version">eGPS 1.15<span> <font size="3">2021/11/17</font></span></li>
+  <li class="features">New features:</li>
+
+		
+<li>1. Use multiple threads to accelerate the nodes' date inference of CGB.</li>
+			
+	        <li>2.	Update the logo of CGB.</li>	
+
+			<li class="features">Fixed bug:</li>
+		<li>Fix the error output of “All mutations from root” column in the “Export leaf information” of CGB.</li>
+
+		  
+
+	  </ul>	
+		
+		
+		<ul>	
+ <li class="version">eGPS 1.14<span> <font size="3">2021/10/14</font></span></li>
+  <li class="features">New features:</li>
+
+		
+<li>1.Optimize the analysis process for CGB to add a new sequence to the existing tree.  </li>
+			
+
+			<li class="features">Fixed bug:</li>
+			<li>Fix the instability problem of dates manipulation in CGB.</li>
+			
+
+		  
+
+		</ul>		
+		<ul>
+  <li class="version">eGPS 1.13<span> <font size="3">2021/09/27</font></span></li>
+  <li class="features">New features:</li>
+
+		
+<li>1.CGB provides new “Identification of non-mutated path” panel, users can identify and highlight the non-mutated nodes with the same sequence as the target node (identify by CGB ID). </li>
+			<li>2.CGB provides a sample function, users can sample the big tree and get a small scale of data.</li>
+
+			<li class="features">Fixed bug:</li>
+			<li>Fix the import problem of CGB that File Chooser cannot identify the supported suffix.</li>
+			
+
+		  
+
+		</ul>
+		
+		
+		<ul>
+  <li class="version">eGPS 1.12<span> <font size="3">2021/08/31</font></span></li>
+  <li class="features">New features:</li>
+
+		
+
+			<li>1. Performance optimization for CGB by reducing the memory consumption required for operation. </li>
+			<li>2. To improve the network transmission speed, the CGB data format version is optimized and the interface file size is reduced through a high compression ratio compression algorithm.</li>
+			<li>3. Optimize the analysis process of adding a new sequence to the existing tree by CGB to improve the running speed.</li>
+
+			<li class="features">Fixed bug:</li>
+			<li>Fix the export problem of saving the result of the Eheatmap module as vector diagram.</li>
+			
+
+		  
+
+		</ul>
+		
+<ul>
+  <li class="version">eGPS 1.11<span> <font size="3">2021/07/23</font></span></li>
+  <li class="features">New features:</li>
+
+			<li>1. CGB provides data import options, users can view the data version they are interested in.</li>
+			<li>2. CGB provides an analysis process of local data, users can add their own data to existing data, or use their own data to generate CGB interface files.</li>
+		
+			
+
+		  
+
+		</ul>
+		
+<ul>
+  <li class="version">eGPS 1.10<span> <font size="3">2021/06/23</font></span></li>
+  <li class="features">New features:</li>
+
+			<li>CGB provides the Visual Effects panel, and users can adjust the parameters of the interface acceleration.</li>
+
+		
+			<li class="features">Fixed bug:</li>
+			<li>1. Fixed errors with exported SVG files and added option to export EPS vector graphics.</li>
+			<li>2. Fixed memory issues with CGB lineage tracking and optimized speed.</li>
+
+
+		  
+
+		</ul>
+		<ul>
+
+		  <li class="version">eGPS 1.9<span> &nbsp;&nbsp;<font size="3">2021/05/14</font></span></li>
+			
+			<li class="features">New features:</li>
+
+			<li>Improved the plug-in development guide and added a step-by-step development example.</li>
+
+			<li>Fixed the problems in the Venn diagram module and added a Plain text info panel in this module.</li>
+
+		  <li>Added Tanglegram module to compare two trees.</li>
+		  <li>Added a calculate distance matrix button in Maf operator module.</li>
+		  <li>Updated the Coronavirus GenBrowser plug-in, fixed the display problem of amino acid mutations of frameshift mutations.</li>
+
+		  
+
+		</ul>
+		<ul>
+
+			<li class="version">eGPS 1.8<span> &nbsp;&nbsp;<font size="3">2021/02/07</font></span></li>
+			
+			<li class="features">New features:</li>
+
+			<li>Added reduced-rate-test and accelerated-rate-test modules for CGB plug-in.</li>
+
+			<li>CGB binary nomenclature was supported.</li>
+
+		  
+
+		</ul>
+		
+		<ul>
+
+
+			<li class="version">eGPS 1.7<span> &nbsp;&nbsp;<font size="3">2020/11/27</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Added new functions for plug-in(module) "Coronavirus GenBrowser(CGB) 1.0".</li>
+
+			<li>Added Classic Skyline plot module.</li>
+
+			<li>Add the Bed merger module.</li>
+
+			<li>Add an Initialize button in Alignment Trimmer module to help users select a sequence as a reference sequence.</li>
+
+			<li>Make a modification to make all modules independent. Transform 
+the module that need user to drag the file into the main interface to 
+open into a module that can be opened independently. Enables users to 
+quickly find the required functions they need in the iTools menu bar.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>When processing VCF files, merging overlapping BED records before using include Bed and exclude Bed functions.<br>
+
+		  </li>
+
+		</ul>
+
+		<ul>
+
+		  <li class="version">eGPS 1.6<span> &nbsp;&nbsp;<font size="3">2020/08/12</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Added new module "Coronavirus GenBrowser 1.0" as a plug-in.</li>
+
+			<li>The data panel displays more detailed basic information about the data format, making it smarter to determine the data type.</li>
+
+			<li>Added the MA Plot module, which supports displaying the scatter 
+plot of the original data and the scatter plot after log transformation.</li>
+
+			<li>Added the function of ringing in the heat map.</li>
+
+			<li>Added Alignment trimmer module.</li>
+
+			<li>Added VCF to SNP data module.</li>
+
+			<li>Added Stairway plot module.</li>
+
+			<li>Improve the plug-in mechanism, and add a tutorial on how to develop eGPS plug-ins in eclipse.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>Text editor fixes the problem that continuous search cannot be performed.</li>
+
+			<li>The text editor has added a monospace font, which makes it easy to view MSA data.</li>
+
+	  </ul>
+
+		<ul>
+
+			<li class="version">eGPS 1.0.5<span> &nbsp;&nbsp;<font size="3">2019/12/16</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Add Venn diagram painting module, including data input panel, traditional Venn diagram and Upset diagram.</li>
+
+			<li>Adjust the behavior after the Build tree button, the parameters 
+are placed in the corresponding tab instead of global setting panel 
+(Preference).</li>
+
+			<li>Add global font setting options, currently supports partial font changes.</li>
+
+			<li>Replace new icons in the Toolbar to express meanings clearer.</li>
+
+			<li>For UTF-8 encoded text files, when the suffixes do not match our 
+standard, add the function of determining the format based on its 
+content. The first successfully judged format will be assigned as 
+current format.</li>
+
+			<li>Added editor module capable of opening large text file.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>When using the heat map module and the row names are not displayed, the legend will stick to cells.</li>
+
+			<li>VCF snapshot button on TOOLS is enabled incorrectly.</li>
+
+			<li>The control panel of the heat map is not all visible on some computers.</li>
+
+			<li>The result of KMeans++ algorithm will be random in heatmap module.</li>
+
+		</ul>
+
+	
+
+		<ul>
+
+			<li class="version">eGPS 1.0.4<span> &nbsp;&nbsp;<font size="3">2019/11/08</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Added highly interactive heatmap module.</li>
+
+			<li>When exporting file successfully, all the software modules record the saved file path.</li>
+
+			<li>For each module's tab page, add a close button when module is not focused.</li>
+
+			<li>The alignment viewer module adds the Layout parameter bar and adds the InterLeaved layout.</li>
+
+			<li>During the software initializing, the eGPS logo will be displayed.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>After clicking Apply and Close in Preferences, the data is not refreshed.</li>
+
+			<li>When the import file has no information to display, clicking on 
+the rectangle box in the data area will incorrectly load the information
+ on the information area.</li>
+
+			<li>The module of VCFTools can’t input decimals in the Max missing and HWE box.</li>
+
+		</ul>
+
+		<ul>
+
+			<li class="version">eGPS 1.0.3<span> &nbsp;&nbsp;<font size="3">2019/09/12</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Display the information of the imported file on the information 
+area. Data types include Multiple sequences (MS), Genetic distance 
+(DIST), Phylogenetic tree (TREE), NEXUS, and Population history model 
+(SIMU).</li>
+
+			<li>Multiple genetic distance matrixes can be calculated by resampling (bootstrap) and exported for bootstrap analysis.</li>
+
+			<li>Build genome tree directly from VCF files.</li>
+
+			<li>Replace OTU names in the tree viewer module with batch mode.</li>
+
+			<li>Ambiguous nucleotide bases (Nucleotide ambiguity code) are 
+considered when calculating the genetic distance. Two options (i.e. 
+ambiguous base as gap / ambiguous base with equal possibility) are 
+provided.</li>
+
+			<li>When importing multiple MSA files of the same type, batch 
+operations are supported. 1) Multiple alignment viewer modules will be 
+opened up and other subsequent analysis can be employed respectively; 2)
+ When using the multiple-sequence aligner, all fasta files will be 
+aligned.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>A green portable version (i.e. zip package) on the windows system.</li>
+
+			<li>The robustness of the MAP analysis is enhanced.</li>
+
+			<li>Fixed a problem with the SNJ tree reconstruction method.</li>
+
+			<li>Fixed the NaN problem in distance view model.</li>
+
+		</ul>
+
+
+
+		<ul>
+
+			<li class="version">eGPS 1.0.2<span> &nbsp;&nbsp;<font size="3">2019/07/26</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Genetic distance viewer module adds new display mode of heat map 
+for enhanced visualization, and support for exporting vector graphics.</li>
+
+			<li>In alignment viewer module, exporting NEXUS format file is supported.</li>
+
+			<li>For alignment viewer module, loading large file in short time is permitted.</li>
+
+			<li>In the evolution analysis, add new features to jump between 
+modules, for example: from the Alignment viewer to the Distance viewer 
+and the Tree viewer.</li>
+
+			<li>Provides green, free installation version for MAC OS.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>Fix the Neuxs file format parse problem, now supports tree and data block.</li>
+
+			<li> In the history root node, when you click the right mouse button to mark, a null pointer error occurs.</li>
+
+			<li>When dragging an error file, two dialogs will pop up twice.</li>
+
+			<li>When the MSA is exported to, for example, the Phylip file format,
+ since the officially defined format is that the sequence noun cannot 
+exceed 12 characters, it is now changed to a loose format.</li>
+
+			<li>Some data is not suitable for DEG-MassSpecturm module to analyze, add a dialog to tell users.</li>
+
+		</ul>
+
+
+
+		<ul>
+
+			<li class="version">eGPS 1.0.1<span> &nbsp;&nbsp;<font size="3">2019/07/09</font></span></li>
+
+			<li class="features">New features:</li>
+
+			<li>Increase Alignment View export format, now we support ClustW/ GCG(MSF)/MEGA/PAML/ PHYLIP.</li>
+
+			<li>Add new module geneToAlignment, reconstruct the codes of geneToAlignment/geneToDistance/ geneToGenetree.</li>
+
+			<li>Update user manual.</li>
+
+			<li>Add Log.</li>
+
+			<li>Add new module multiple sequence aligner which package two programs : ClustalW and Mafft.</li>
+
+			<li>Add new options when obtaining alignment, calculate Genetic distance and infer phylogenetic 
+
+			tree from gene symbol: 1. whole gene body length 2. exons 3. introns 4. coding 
+
+			sequence 4. 4-fold degenerate sites.</li>
+
+			<li>Add new options for Genetic distance: The transversion rate. When obtaining alignment of 4-fold
+
+			degenerate sites, 4DTv rates (the rate of transversion at fourfold degenerate sites) could be computed.</li>
+
+			<li class="features">Fixed bug:</li>
+
+			<li>considered gene regions not wok for exons</li>
+
+			<li>For swingx jar library: JXTaskPanel in MAC OS is grey.</li>
+
+			<li> Alignemnt View display problem.</li>
+
+			<li>These are two dialog when files in Recent file have been deleted</li>
+
+			<li>When save GeneToGeneticDist file in distance viewer, the number of OUT is not correct.</li>
+
+		</ul>
+
+
+
+		<ul>
+
+			<li class="version">eGPS 1.0.0<span> &nbsp;&nbsp;<font size="3">2019/06/01</font></span></li>
+
+			<li>Perform comprehensive multi-omic and evolutionary analyses.</li>
+
+			<li>Combines the power of cloud computing and the advantage of desktop application.</li>
+
+			<li>Has a user-friendly graphic interface and is highly interactive.</li>
+
+		</ul>
+
+  </div>
+
+
+
+    <div id="footer">
+
+        <img src="eGPS_Desktop_files/CAS.png">
+
+        <p><a href="http://www.egps-project.org/" target="_blank">Strategic Priority Research Program of the Chinese Academy of Sciences, Grant No. XDB13000000</a><br>Maintained by BIG Data Center, Beijing Institute of Genomics, Chinese Academy of Sciences.<br>
+
+        </p>
+
+    </div>
+
+
+
+</div>
+
+
+
+</body></html>

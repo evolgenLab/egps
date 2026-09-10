@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="egps\images\eGPS_link.png">
+    <title>eGPS Software</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            overflow: hidden;
+        }
+        #head {
+            width: 100%;
+            background: #468CAF;
+        }
+        #headnote {
+             width: 100%;
+             background: lightyellow;
+            font-size:25px;
+         }
+        #logo {
+            width: 43px;
+            height: 100px;
+            padding-top: 10px;
+        }
+        #software {
+            width: 500px;
+            height: 85px;
+            padding-left: 40px;
+        }
+		#all-content{
+			width:80%;
+			margin:auto;
+			box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+		}
+		
+        #introduce {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: "Calibri";
+            text-align:justify;
+        }
+        #introduce p {
+            line-height: 25px;
+            font-family: "Calibri";
+        }
+		
+		
+		 /* 使用Flexbox布局将页面分成两半 */
+        .split-container {
+            display: flex;
+            height: 100%;
+        }
+		
+	   .split-half {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+		  /* 左半部分 */
+        .left-half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			text-align:justify;
+        }
+		
+		  /* 右半部分 */
+        .right-half {
+            flex:1;
+            display: flex;
+			margin-left: 20px;
+            justify-content: center;
+            align-items: center;
+			overflow-x: hidden; /* 允许横向滚动 */
+            white-space: nowrap; /* 内容不换行 */
+        }
+		
+   .carousel {
+    display: flex;
+	
+    width: 1300%; /* 13张图片的总宽度，每张占100% */
+    animation: autoscroll 20s infinite ease-out;
+  }
+
+  .carousel img {
+
+    width:100%; /* 图片宽度设为容器的三分之一 */
+    height: 100%;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  @keyframes autoscroll {
+   0% { transform: translateX(0); }
+  3% { transform: translateX(0); }
+  11% { transform: translateX(-100%); }
+  19% { transform: translateX(-200%); }
+  27% { transform: translateX(-300%); }
+  35% { transform: translateX(-400%); }
+  43% { transform: translateX(-500%); } 
+  51% { transform: translateX(-600%); }
+  59% { transform: translateX(-700%); }  
+  67% { transform: translateX(-800%); }
+  75% { transform: translateX(-900%); }
+  83% { transform: translateX(-1000%); }
+  91% { transform: translateX(-1100%); }
+  99% { transform: translateX(-1200%); }
+  /* 最后瞬间跳转到第一张图片 */
+  100% { transform: translateX(0); }
+  }
+		
+    .icon-title-group {
+            display: flex;
+			margin-bottom: 2px;
+			align-items: flex-end;  
+     }
+
+     .icon {
+			height:40px;
+
+      }
+		
+	   #egps-introduce {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: "Calibri";
+            text-align:justify;
+        }
+        #egps-introduce p {
+            line-height: 20px;
+            font-family: "Calibri";
+        }
+		
+	    #egpsDownload {
+            position: relative;
+            text-align: left; 
+        }
+
+        #egpsDownload p {
+            display: inline;
+/*			margin-left: 25px;*/
+            vertical-align: left;
+            font-family: "Calibri";
+
+        }
+
+        #egpsDownloadCore {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-family: "Calibri";
+        }
+		 .virus-icon {
+           height: 40px;
+           margin-right: 5px; 
+        }
+
+        #content {
+            position: relative;
+            text-align: left;
+        }
+
+        #content p {
+            display: inline;
+            vertical-align: middle;
+        }
+        a {
+            color: #0b68b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a span {
+            color: deepskyblue;
+        }
+        #image img{
+            transition: all 0.5s;
+            position: relative;
+            margin: 20px;
+			margin-left: 5px;
+			margin-bottom: 1px;
+        }
+		
+        #image img:hover{
+            cursor: pointer;
+            transform: scale(1.3);
+        }
+        .references {
+			 background: #f0f0f0; /* 浅灰色背景 */
+			 border-radius: 15px; /* 更明显的圆角 */
+			 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* 外阴影效果 */
+            font-size: 16px;
+            color: black;
+            position: relative;
+            text-align: left;
+        }
+		
+		
+        .references p {
+            line-height: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+            display: inline-block;
+            font-family: "Calibri";
+            text-align:justify;
+        }
+
+        .references img {
+			height: 30px;
+			margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .references a {
+            color: black;
+            margin-left: 35px;
+        }
+		
+		#reference_title {
+			font-size: 20px;
+			margin-left: 20px;
+		}
+	
+        #Developed {
+            margin-top: 30px;
+        }
+        
+        #footer {
+            margin-top: 30px;
+            width: 100%;
+            background: #468CAF;
+        }
+        #footer p {
+            display: inline-block;
+            font-size: 13px;
+            color: white;
+            text-align: left;
+            margin-top: 5px;
+            font-family: "Calibri";
+        }
+        #footer a {
+            color: white;
+        }
+        #footer img {
+            display: inline-block;
+            vertical-align: text-top;
+        }
+		
+
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+  .title {
+     font-size: 25px; /* 标题字体大小 */
+	 white-space: nowrap; /* 防止换行 */
+     color: #333; /* 标题颜色 */
+    }
+
+
+	.section-divider {
+    border: none; /* 移除默认边框 */
+    height: 2px; /* 分割线的厚度 */
+    background-image: linear-gradient(to right,  #dee2e6, #f8f9fa); /* 渐变效果 */
+    margin: 0px 0; /* 上下边距 */
+  }
+		
+	
+
+    </style>
+</head>
+<body>
+<div id="container">
+
+    <div id="head">
+        <img src="egps\images\First_page_label1.png" id="logo"/>
+        <img src="egps\images\First_page_label2.png" id="software"/>
+    </div>
+ <div id="all-content">
+    <div id="introduce">
+		   <div class="split-container">
+         <div class="split-half left-half">
+           <p>&ensp; &ensp; It has become increasingly challenging for researchers to analyze the exponentially expanding multi-omic data. In this project, we have developed a multi-functional software named evolutionary Genotype-Phenotype Systems (eGPS) that enables users to perform comprehensive multi-omic and evolutionary analyses. The eGPS has a user-friendly graphic interface, and is highly interactive. Moreover, third-party plugins are supported and the developers can take the credits for contributing the plugins. This makes it easier for the community to implement new modules and also encourages their sharing. The eGPS not only develops the new functions/tools/methods but also bridges the gap between multi-omic and evolutionary analyses.
+        </p>
+        </div>
+       <div class="split-half right-half">
+              
+
+ <div class="carousel">
+
+			 <img src="egps\images\eGPS2.png" alt="第一张图片">	  
+			<img src="egps\images\eGPS2_treeWithBarplot.png" alt="第二张图片">
+			 <img src="egps\images\eGPS2_geneFamily.png" alt="第三张图片">
+	         <img src="egps\images\eGPSHome.png" alt="第四张图片">
+            <img src="egps\images\eGPS_Tree.png" alt="第五张图片">
+            <img src="egps\images\eGPS_RNA.png" alt="第六张图片">
+			<img src="egps\images\alignmentViewer.png" alt="第七张图片">
+			<img src="egps\images\Heatmap.png" alt="第八张图片">
+			<img src="egps\images\simulator2.png" alt="第九张图片">
+			<img src="egps\images\simulator3.png" alt="第十张图片">
+			<img src="egps\images\treeViewer2.png" alt="第十一张图片">
+			<img src="egps\images\VCFSnapshot.png" alt="第十二张图片">
+			<img src="egps\images\VCFStatistics.png" alt="第十三张图片">
+            </div>
+      
+
+			   
+
+   
+
+        </div>
+    </div>
+       
+		
+		 <div id="image">
+		 <table  >
+		 	<tbody>
+		 	<tr>
+		 	
+		 	   <div class="icon-title-group">
+        <img src="egps\images\First_page_label1.png" alt="图标" class="icon">
+        <h1 class="title">eGPS</h1>	 	
+		 <br/>
+		 	  
+    </div>
+			 <hr class="section-divider">	
+			<br/>
+  <div >
+
+        <p>&#8194; &#8194;The eGPS desktop application is a free application for integrating multi-functional evolutionary
+
+            and multi-omic analyses. It is developed in Java, and can run across different computer platforms.
+
+        </p>
+
+
+    </div>
+		
+
+
+   <div id="egpsDownload">
+		
+	    <div>
+			<br/>
+				<p style="font-size: 20px;  text-align:left; line-height:1.5 !important; font-weight:bold;"> eGPS v1.x<br/></p>
+			
+			
+          <p><span>eGPS desktop 1.26 32bit:</span></p>
+          <p>Windows (
+
+			<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_windows_32bit.zip"><span title="Portable version">Zip package</span></a>)</p>
+
+           <br \="">
+           <p>eGPS desktop 1.26 64bit:</p>
+           <p>Windows (
+
+			<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_windows_64bit.zip"><span title="Portable version">Zip package</span></a>)</p>
+
+            <p>Mac OS (<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_macOS_64bit.zip"><span title="Portable version">Zip package</span></a>)</p>
+			
+			<br \="">
+			<p><span>User manual (PDF):</span></p>
+
+            <p><a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_UserManual_en.pdf" target="_blank"><span>English</span></a></p>
+
+            <p><a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_UserManual_zh.pdf" target="_blank"><span>Chinese</span></a></p>
+			<br \=""><br \="">
+			
+			
+			
+			<p style="font-size: 20px; text-align:left; line-height:1.5 !important; font-weight:bold;"> eGPS v2.x<br/></p>
+			
+			
+            <p>eGPS desktop 2.0 64bit:</p>
+            <p>Windows (
+
+			<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_v2_windows_64bit.zip"><span title="Portable version">Zip package</span></a>)</p>
+
+            <p>Mac OS (<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_v2_macOS.zip"><span title="Portable version">Zip package</span></a>)</p>
+			 <br \="">
+			
+			<p>eGPS R package:</p>
+			
+			<p>R4eGPS (
+
+			<a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/R4eGPS.tar.gz"><span title="Portable version">Download</span></a>)</p>
+			
+			 <br \="">
+			  <p><a href="https://www.yuque.com/u21499046/egpsdoc/" target="_blank"><span>User manual</span></a></p>
+
+			<br \=""><br \="">
+
+			<p style="font-size: 20px; text-align:left; line-height:1.5 !important; font-weight:bold;"> <span>Test data:</span></p>
+
+
+
+			<p><a href="https://github.com/Wick-Zhang/egpscloud/releases/download/v1.0/eGPS_test_dataSet.zip"><span>Download</span></a></p>
+
+			
+   
+			<p style="font-size: 20px; margin-left:30px; text-align:left; line-height:1.5 !important; font-weight:bold;"> <span>eGPS Update logs:</span></p>
+			
+
+			<p><a href="eGPS_Desktop_Update_logs.html" target="_blank"><span>Update logs</span></a></p>
+
+        </div>
+
+    </div>
+			
+		
+		 	</tr>
+            <br/>
+		
+				
+			
+				
+			  <tr>
+		  
+	<div class="icon-title-group">
+        <img src="egps\images\cgb2_logo.png" alt="图标" class="virus-icon">
+  	
+    </div>
+				  
+	  <hr class="section-divider">		
+		<br/>		  
+		<p style="font-size: 20px;text-align:left; line-height:1.5 !important; font-weight:bold;"> Coronavirus GenBrowser Website Link<br/></p>
+		    <a href="https://www.biosino.org/cgb/" target="_blank">https://www.biosino.org/cgb/</a><br/>
+			<a target="_blank" href="https://ngdc.cncb.ac.cn/cgb/">https://ngdc.cncb.ac.cn/cgb/</a>
+			 <br/>
+			 
+			 <br/>
+			 <p style="font-size: 20px; text-align:left; line-height:1.5 !important; font-weight:bold;">Coronavirus GenBrowser jar/war<br/></p>
+				 <a href="downloads.html" target="_blank">Download</a>
+			<br/>
+		   	 <br/>
+				  <br/>
+			  </tr>
+			</tbody>								
+		 </table>
+      
+       </div>
+	
+    </div>
+
+   
+    <div class="references" >
+		<br/>
+	<h1 id="reference_title">How to cite</h1>	
+		
+			
+	<p> <br/>1. Dalang Yu, Lili Dong, Fangqi Yan, Hailong Mu, Bixia Tang, et al. (2019) eGPS 1.0: comprehensive software for multi-omic and evolutionary analyses. National Science Review, 6(5):867-869, <a href="https://doi.org/10.1093/nsr/nwz079" target="_blank" style="color: deepskyblue;">https://doi.org/10.1093/nsr/nwz079</a></p>
+	<p style="padding-left:0px; "> 2. Dalang Yu, Xiao Yang, Bixia Tang, Yi-Hsuan Pan, Jianing Yang, Guangya Duan, Junwei Zhu, Zi-Qian Hao, Hailong Mu, Long Dai, Wangjie Hu, Mochen Zhang, Ying Cui, Tong Jin, Cui-Ping Li, Lina Ma, Language translation team, Xiao Su, Guoqing Zhang, Wenming Zhao, Haipeng Li, Coronavirus GenBrowser for monitoring the transmission and evolution of SARS-CoV-2, Briefings in Bioinformatics, 2022; bbab583 <a href="https://doi.org/10.1093/bib/bbab583" target="_blank" style="color: deepskyblue;">https://doi.org/10.1093/bib/bbab583</a></p>
+	
+		<br/>
+		<br/>
+		<br/>
+	<h1 id="reference_title">Help & Support</h1>	
+		<br/>
+<p><strong>Email:</strong> egpscloud@big.ac.cn&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+        <p><strong>QQ group: </strong> 550899355 (Chinese)</p>
+       
+		<br/>
+        <p id="Developed"><strong>Developed by :</strong></p>
+        <a href="http://www.sinh.ac.cn" target="_blank"><img src="egps\images\sinh_logo.png" title="CAS-MPG Partner Institute for Computational Biology, Shanghai Institute of Nutrition and Health, Shanghai Institutes for Biological Sciences" /></a>
+        <a href="http://bigd.big.ac.cn" target="_blank"><img src="egps\images\ngdc.png" title="BIG Data Center, Beijing Institute of Genomics" /></a>
+
+    </div>
+</div>
+    <div id="footer">
+        <div> <img src="egps\images\CAS.png">
+        <p><a href="http://www.egps-project.org" target="_blank">Strategic Priority Research Program of the Chinese Academy of Sciences, Grant No. XDB13000000</a><br/>Maintained by BIG Data Center, Beijing Institute of Genomics, Chinese Academy of Sciences.</p>
+		</div>
+		<p style="text-align:left;">
+			<a href="https://beian.miit.gov.cn" target="_blank" style="color:red;">京ICP备10050270号-14</a>
+        </p>
+    </div>
+
+</div>
+	
+</body>
+</html>

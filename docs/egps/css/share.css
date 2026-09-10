@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+/*头部样式*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a, img {
+    border: 0;
+}
+
+img {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    background-color: #fff
+}
+
+a {
+    color: #d63c00;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px !important;
+    }
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+    .navbar-fixed-bottom, .navbar-fixed-top {
+        width: 1200px !important;
+        border-radius: 0;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        border-radius: 4px;
+    }
+}
+
+/*.container{padding-left:0px;padding-right:0px;margin-left:auto; margin-right:auto;}*/
+
+.index_top {
+    height: 121px;
+    background-color: #0b68b5;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.index_top1 {
+    height: 80px;
+    width: 160px;
+    float: left;
+    padding-left: 10px
+}
+
+.nav {
+    height: 40px;
+    background: #3aa6c8;
+}
+
+.nav ul li {
+    float: left;
+}
+
+/*.nav ul li:first-child {margin-left:1%;}*/ /*29%*/
+.nav ul li a {
+    font-size: 16px;
+    font-family: "Arial";
+    color: #fff;
+    line-height: 40px;
+    padding: 0 40px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 0px
+}
+
+.nav ul li a:hover {
+    line-height: 40px;
+    background: #d15448;
+    color: #fff;
+    padding: 0 40px;
+    margin: 0 0px
+}
+
+/*background:#0182ec;*/
+.nav ul li.active a {
+    line-height: 40px;
+    background: #d15448;
+    color: #fff;
+    padding: 0 40px;
+    margin: 0 0px
+}
+
+/*.nav ul li:last-child {margin-left:20%;}*/ /*29%*/
+
+.nav ul li ul {
+    display: none;
+}
+
+.nav li:hover ul {
+    display: block;
+    z-index: 9999
+}
+
+/* z-index:9999 */
+.nav ul li ul li {
+    height: 38px;
+    display: block;
+    float: none;
+    background: #0182ec;
+    font-size: 16px;
+}
+
+.nav ul li ul li a {
+    text-align: center;
+    width: auto;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    text-decoration: none;
+    padding: 0px 20px;
+    color: #ffffff;
+}
+
+.nav ul li ul li a:focus, .nav ul li ul li a:hover {
+    text-align: center;
+    width: auto;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    text-decoration: none;
+    padding: 0px 20px;
+    color: #ffffff;
+    background: #0c64b6;
+}
+
+/*.nav ul li ul li:last-child {margin-left:0px;}*/
+/*.nav .nav-tabs > li > a {text-align:center; width:auto; height:38px; line-height:38px; display:block; text-decoration:none; padding:0px 20px; color:#ffffff;background-color:#399edb;}*/
+
+/*
+.nav > li > a:focus, .nav > li > a:hover{ color:#ffffff;background:#d15448; }
+.nav  ul li ul{display:none;}
+.nav  > li > ul > li {background-color:#0c64b6;  border-bottom:1px solid #fff; padding-top:5px; padding-bottom:5px;padding-left:10px;}
+.nav > li > ul > li > a{text-align:center; width:auto; height:28px; line-height:28px; display:block; text-decoration:none; padding:0px 20px; color:#ffffff;}
+.nav  ul li ul li{background-color:#0c64b6; float:left; border-bottom:1px solid #fff;}
+.nav  ul li ul li:hover{background-color:#d15448; color:#fff}
+
+.nav ul li ul li:hover ul{visibility:visible;}
+.nav  ul li ul li a{color:#fff; }
+.nav ul li ul li ul{visibility:hidden; position:relative; top:-41px; left:165px;}
+.nav ul li ul li ul li{background:#f1eaa5;}*/
+
+.searchresult {
+    border-collapse: collapse;
+}
+
+.searchresult th {
+    background-color: #D2DDF4;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.searchresult td {
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    height: 30px;
+}
+
+.searchresult a {
+    color: #900B09;
+    text-decoration: underline;
+}
+
+.searchresult a:hover {
+    color: #FF0000;
+}
+
+.header {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1A3473; /*171717*/
+    padding: 5px 0px;
+    margin-left: 5px;
+}
+
+.header_border {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #bfe1f7;
+    /*minwidth:900px;*/
+    text-align: left;
+    background-color: #FFF;
+    padding: 5px 0px 0px 20px;
+}
+
+.note1 {
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: #efefef;
+    padding: 5px 10px;
+}
+
+.foot {
+    height: auto;
+    margin: auto;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515151;
+    font-family: "Arial";
+    padding-top: 18px;
+    border-top: 4px solid #0c64b7;
+    text-align: center;
+    clear: both;
+    clear: both;
+    background: #f9f9f9
+}
+
+/* padding-top:18px;*/
+
+.foot ul {
+    float: left;
+    width: 18%;
+    height: 140px;
+    margin-left: 2%
+}
+
+.foot ul li {
+    font-size: 15px;
+    font-family: "Arial";
+    color: #333;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+}
+
+.foot ul li h1 {
+    font-size: 16px;
+    font-family: "Arial";
+    color: #333;
+    text-align: left;
+    line-height: 30px;
+    font-weight: bolder;
+    background-image: url(../images/xian2.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    font-weight: normal;
+    margin-bottom: 10px
+}
+
+.foot ul li a {
+    font-size: 14px;
+    font-family: "Arial";
+    color: #666;
+    line-height: 24px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    font-weight: normal
+}
+
+.foot ul li a:hover {
+    color: #0b68b5;
+    padding-left: 14px;
+    background-image: url(../images/xian3.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.foot1 {
+    width: 1200px;
+    height: 80px;
+    clear: both;
+    margin: auto;
+    /*border-top: 1px solid #efefef;*/
+    /*padding-top: 14px*/
+}
+
+.foot1 ul {
+    float: left;
+    height: 33px
+}
+
+.foot1 ul li {
+    color: #333;
+    text-align: left;
+    font-size: 13px;
+    font-family: "Arial";
+    color: #666;
+    line-height: 22px;
+}
+

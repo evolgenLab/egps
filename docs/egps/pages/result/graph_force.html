@@ -1,0 +1,149 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@page language="java" import="java.io.*" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eGPS Cloud</title>
+
+    <script src="/egpscloud/egps/js/jquery.min.1.12.4.js" type="text/javascript"></script>
+    <script src="/egpscloud/egps/js/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/egpscloud/js/echarts.min.js" type="text/javascript"></script>
+    <script src="/egpscloud/egps/js/dataTool.js" type="text/javascript"></script>
+    <link href="/egpscloud/egps/js/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/share.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/buttons.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<div class="container">
+    <!-- top start-->
+    <jsp:include page="/inc/header.html"/>
+    <!-- top end-->
+
+
+    <!-- content start -->
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div><h3><s:property value='#parameters.ptitle'/></h3></div>
+
+            <div class="panel" style="margin-top:20px;">
+                <div class="panel-body" style="padding:0px; border:none;">
+                    <div id="idchart" style="width:800px;height:700px;">
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- content end -->
+    <jsp:include page="/inc/footer.html"/>
+
+
+</div>
+
+<script type="text/javascript" language="javascript">
+
+    var myChart = echarts.init(document.getElementById('idchart'));
+
+    var title = "<s:property value='#parameters.ptitle' />";
+    var legend = "<s:property value='#parameters.legend' />";
+    var infile = "<s:property value='#parameters.infile' />";
+    var subfile = "";
+    if (infile.indexOf(":") > -1) {
+        var index = infile.indexOf(":");
+        subfile = infile.substring(index + 1, infile.length);
+        subfile = "encapsedata" + subfile;
+    }
+    myChart.showLoading();
+    $.get('http://egpscloud.big.ac.cn/' + subfile, function (xml) {
+    //$.get('http://bigd.big.ac.cn/egpscloud/' + subfile, function (xml) {
+        myChart.hideLoading();
+
+        var graph = echarts.dataTool.gexf.parse(xml);
+        var categories = [];
+        if (legend != null) {
+            if (legend.indexOf(",") > -1) {
+                var larry = legend.split(",");
+                for (var i = 0; i < larry.length; i++) {
+                    categories[i] = {
+                        name: larry[i]
+                    };
+                }
+
+            } else {
+                categories[0] = {
+                    name: legend
+                };
+
+            }
+
+        }
+
+        graph.nodes.forEach(function (node) {
+            node.itemStyle = null;
+            node.symbolSize = 10;
+            node.value = node.symbolSize;
+            node.category = node.attributes.modularity_class;
+            // Use random x, y
+            node.x = node.y = null;
+            node.draggable = true;
+        });
+        option = {
+            title: {
+                text: title,
+                subtext: 'Default layout',
+                top: 'bottom',
+                left: 'right'
+            },
+            tooltip: {},
+            legend: [{
+                // selectedMode: 'single',
+                data: categories.map(function (a) {
+                    return a.name;
+                })
+            }],
+            animation: false,
+            series: [
+                {
+                    name: '',
+                    type: 'graph',
+                    layout: 'force',
+                    data: graph.nodes,
+                    links: graph.links,
+                    categories: categories,
+                    roam: true,
+                    label: {
+                        normal: {
+                            position: 'right'
+                        }
+                    },
+                    force: {
+                        repulsion: 100
+                    }
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+    }, 'xml');
+
+
+</script>
+
+
+<!-- 底部 end-->
+</body>
+</html>

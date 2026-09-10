@@ -1,0 +1,136 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@page language="java" import="java.io.*" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eGPS Cloud</title>
+    <script src="/egpscloud/egps/js/jquery.min.1.12.4.js" type="text/javascript"></script>
+    <script src="/egpscloud/egps/js/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/egpscloud/js/echarts.min.js" type="text/javascript"></script>
+    <link href="/egpscloud/egps/js/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/share.css" type="text/css" rel="stylesheet"/>
+    <link href="/egpscloud/egps/css/buttons.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<div class="container">
+    <jsp:include page="/inc/header.html"/>
+
+
+    <!-- content start -->
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div><h3><s:property value='#parameters.ptitle'/></h3></div>
+
+            <div class="panel" style="margin-top:20px;">
+                <div class="panel-body" style="padding:0px; border:none;">
+                    <div id="idchart" style="width:600px;height:400px;">
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- content end -->
+    <jsp:include page="/inc/footer.html"/>
+
+
+</div>
+
+<script type="text/javascript" language="javascript">
+
+    var myChart = echarts.init(document.getElementById('idchart'));
+
+    var title = "<s:property value='#parameters.ptitle' />";
+    var infile = "<s:property value='#parameters.infile' />";
+    var weburl = "http://biocloud.big.ac.cn/ajax/ajaxshowDrawEchartScatter.action";
+    var nameparam = {"infile": infile};
+    $.ajax({
+        url: weburl,
+        type: 'get',
+        crossDomain: true,
+        dataType: 'json',
+        data: nameparam,
+        success: function (data) {
+            var dataarry = data.jsonStr;
+            var xdatadarry = eval("(" + dataarry + ")");
+            var option = {
+                title: {
+                    text: '',
+                    subtext: ''
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    showDelay: 0,
+
+                    axisPointer: {
+                        show: true,
+                        type: 'cross',
+                        lineStyle: {
+                            type: 'dashed',
+                            width: 1
+                        }
+                    }
+                },
+                legend: {
+                    data: []
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {show: true},
+                        dataZoom: {show: true},
+                        dataView: {show: true, readOnly: false},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                xAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        axisLabel: {}
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        axisLabel: {}
+                    }
+                ],
+                series: [
+                    {
+                        name: '',
+                        type: 'scatter',
+                        data: xdatadarry
+                    }
+                ]
+            };
+
+
+            myChart.setOption(option);
+
+        }
+    });
+
+
+</script>
+
+
+<!-- 底部 end-->
+</body>
+</html>
