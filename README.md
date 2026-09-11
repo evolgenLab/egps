@@ -10,10 +10,9 @@ eGPS is a collection of tools for genomic and evolutionary data analysis. This w
 
 Available resources include:
 
-- eGPS desktop applications for Windows and macOS
-- eGPS v1.x and v2.x releases
+- eGPS v1.x release
+- eGPS software for Windows and macOS
 - English and Chinese user manuals
-- R4eGPS R package
 - Test data
 - Coronavirus GenBrowser downloads
 

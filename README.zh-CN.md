@@ -8,10 +8,9 @@ eGPS 是一套用于基因组学和进化数据分析的工具。本网站提供
 
 网站提供以下资源：
 
-- Windows 和 macOS 版 eGPS 桌面软件
-- eGPS v1.x 和 v2.x 版本
+- eGPS v1.x 版本
+- Windows 和 macOS 版 eGPS 软件
 - 中文和英文用户手册
-- R4eGPS R 软件包
 - 测试数据
 - Coronavirus GenBrowser 下载文件
 
