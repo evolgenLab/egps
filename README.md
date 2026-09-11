@@ -2,6 +2,8 @@
 
 Welcome to the official eGPS software download site.
 
+[中文版 README](README.zh-CN.md)
+
 eGPS is a collection of tools for genomic and evolutionary data analysis. This website provides access to released eGPS desktop applications, user manuals, test data, and related software resources.
 
 ## Downloads
