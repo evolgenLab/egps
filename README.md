@@ -22,4 +22,4 @@ Download links are provided on the website. Large installation packages and supp
 
 This repository contains the public static files for the eGPS download website.
 
-Visit the website: https://evolgenlab.github.io/egps-new/
+Visit the website: https://evolgenlab.github.io/egps/
