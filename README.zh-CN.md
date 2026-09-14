@@ -20,4 +20,4 @@ eGPS 是一套用于基因组学和进化数据分析的工具。本网站提供
 
 本仓库包含 eGPS 下载网站的公开静态文件。
 
-访问网站：https://evolgenlab.github.io/egps/
+访问网站：https://evolgenlab.github.io/egps-new/
